@@ -3,11 +3,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def mainIndex():
-    return render_template('index.html')
+    return render_template('index.html', selectedMenu='Home')
 
 @app.route('/report')
 def report():
-  return render_template('report.html')
+  return render_template('report.html', selectedMenu='Report')
 
 @app.route('/report2', methods=['POST'])
 def report2():
