@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+        <h1>Latest</h1>
+ {% for post in posts %} 
+ <p>{{post['entry']}}  <b>{{post['name']}}</b></p> 
+ {% endfor %}
+
+<form method = "post" action = "/">
+  <table>
+					<tr><td>Name</td><td><input type="text" id="name" name="name" /></td></tr>
+					
+    <tr><td>Message</td><td><textarea rows="4" cols="50"  id="msg" name="msg" >
+</textarea></td></tr>
+    <tr><td>&nbsp;</td><td><input type="submit" value="Post It!" /></td></tr>
+					
+  </table>
+</form>
+{% endblock %}
