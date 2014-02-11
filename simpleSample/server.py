@@ -17,6 +17,7 @@ def mainIndex():
         # Print query to console (useful for debugging)
         print query
         cur.execute(query)
+        db.commit()
 
     cur.execute('select * from posts')
     rows = cur.fetchall()
@@ -34,6 +35,7 @@ def cursorDictDemo():
         # Print query to console (useful for debugging)
         print query
         cur.execute(query)
+        db.commit()
 
     cur.execute('select * from posts')
     rows = cur.fetchall()
